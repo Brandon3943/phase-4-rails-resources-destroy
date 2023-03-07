@@ -44,6 +44,11 @@ class BirdsController < ApplicationController
     end
   end
 
+  def destroy
+    Bird.find_by(bird_params).destroy
+    204
+  end
+
   private
 
   def bird_params
